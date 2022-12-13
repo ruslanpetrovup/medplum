@@ -11,6 +11,7 @@ import Observation from './pages/observation';
 import { RegisterPage } from './pages/RegisterPage';
 import { SignInPage } from './pages/SignInPage';
 import { SignOutPage } from './pages/SignOutPage';
+import Questionnaire from './pages/Questionnaire';
 
 export default function Router(): JSX.Element {
   const profile = useMedplumProfile();
@@ -28,6 +29,7 @@ export default function Router(): JSX.Element {
   ) : (
     <Routes>
       <Route path="/" element={<LandingPage />} />
+      <Route path="questionnaire" element={<Questionnaire />} />
       <Route path="signin" element={<SignInPage />} />
       <Route path="register" element={<RegisterPage />} />
       <Route path="*" element={<Navigate replace to="/" />} />
